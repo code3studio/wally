@@ -4,11 +4,13 @@ import Tokenomics from "./component/Tokenomics";
 import Ready from "./component/Ready";
 import Footer from "./component/Footer";
 import { Box, Button, Container, Fade, useScrollTrigger } from "@mui/material";
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import About from "./component/About";
 import { useEffect, useState } from "react";
 import Loading from "./component/Loading";
 import MemesGallery from "./component/MemesGallery";
+import RoadMap from "./component/RoadMap";
+import Raffle from "./component/Raffle";
 
 interface Props {
   window?: () => Window;
@@ -26,12 +28,12 @@ function ScrollTop(props: Props) {
   const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
     const anchor = (
       (event.target as HTMLDivElement).ownerDocument || document
-    ).querySelector('#start');
+    ).querySelector("#start");
 
     if (anchor) {
       anchor.scrollIntoView({
-        block: 'center',
-        behavior:'smooth'
+        block: "center",
+        behavior: "smooth",
       });
     }
   };
@@ -41,7 +43,7 @@ function ScrollTop(props: Props) {
       <Box
         onClick={handleClick}
         role="presentation"
-        sx={{ position: 'fixed', bottom: 16, right: 16 }}
+        sx={{ position: "fixed", bottom: 16, right: 16 }}
       >
         {children}
       </Box>
@@ -49,49 +51,45 @@ function ScrollTop(props: Props) {
   );
 }
 
-
-
-function App(props:any) {
-  const [loading,setLoading] = useState<boolean>(true);
+function App(props: any) {
+  const [loading, setLoading] = useState<boolean>(true);
   useEffect(() => {
     setInterval(() => {
-      setLoading(false)
-    },3000)
-  },[])
+      setLoading(false);
+    }, 3000);
+  }, []);
   return (
     <>
-    
-       <Loading loading={loading} />
-    <div className="wrapper" style={{display:loading ?  'none':'flex'}}>
-      <Container maxWidth="xl">
-
-      <div id="start" />
-      <Hero />
-      <div className="marque ">
-        <Divider />
+      <Loading loading={loading} />
+      <div className="wrapper" style={{ display: loading ? "none" : "flex" }}>
+        <Container maxWidth="xl">
+          <div id="start" />
+          <Hero />
+          <div className="marque ">
+            <Divider />
+          </div>
+          <Raffle />
+          <Tokenomics />
+          <RoadMap />
+          <Ready />
+          <section className="about" id="about">
+            <About />
+          </section>
+          <section className="memes" id="memes">
+            <MemesGallery />
+          </section>
+          <div className="marque ">
+            <Divider />
+          </div>
+          <Footer />
+          <Box></Box>
+          <ScrollTop {...props}>
+            <Button size="small" aria-label="scroll back to top">
+              <KeyboardArrowUpIcon />
+            </Button>
+          </ScrollTop>
+        </Container>
       </div>
-      <Tokenomics />
-      <Ready />
-      <section className="about" id="about">
-        <About/>
-     </section>
-      <section className="memes" id="memes">
-        <MemesGallery/>
-     </section>
-      <div className="marque ">
-        <Divider />
-      </div>
-      <Footer />
-      <Box>
-      </Box>
-      <ScrollTop {...props}>
-        <Button size="small" aria-label="scroll back to top">
-          <KeyboardArrowUpIcon />
-        </Button>
-      </ScrollTop>
-      </Container>
-    </div>
-    
     </>
   );
 }

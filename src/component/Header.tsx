@@ -51,25 +51,37 @@ const Header = (_props: Props) => {
       <Hidden mdDown>
         <Box sx={{ position: "absolute", top: 36, left: 30 }}>
           <ButtonBase
-            sx={{ mr: 4, color: "white" }}
-            onClick={() => scrollToAboutMe("about")}
+            sx={{ mr: {xl: 4,lg:2,md:1}, color: "white" }}
+            onClick={() => scrollToAboutMe("raffle")}
           >
-            About Me
+            Raffle
           </ButtonBase>
           <ButtonBase
-            sx={{ mr: 4, color: "white" }}
+            sx={{ mr:{xl: 4,lg:2,md:1}, color: "white" }}
             onClick={() => scrollToAboutMe("wallynomics")}
           >
             Wallynomics
           </ButtonBase>
           <ButtonBase
-            sx={{ mr: 4, color: "white" }}
+            sx={{ mr: {xl: 4,lg:2,md:1}, color: "white" }}
+            onClick={() => scrollToAboutMe("roadmap")}
+          >
+            Roadmap
+          </ButtonBase>
+          <ButtonBase
+            sx={{ mr: {xl: 4,lg:2,md:1}, color: "white" }}
             onClick={() => scrollToAboutMe("how_to_buy")}
           >
             How to Buy
           </ButtonBase>
           <ButtonBase
-            sx={{ mr: 4, color: "white" }}
+            sx={{ mr:{xl: 4,lg:2,md:1}, color: "white" }}
+            onClick={() => scrollToAboutMe("about")}
+          >
+            About Me
+          </ButtonBase>
+          <ButtonBase
+            sx={{ mr: {xl: 4,lg:2,md:1}, color: "white" }}
             onClick={() =>scrollToAboutMe("memes")}
           >
             memes
@@ -132,17 +144,23 @@ const Header = (_props: Props) => {
           role="presentation"
         >
           <List sx={{ mt: 6 }}>
+            <ListItemButton onClick={() =>{ scrollToAboutMe("raffle");  setOpen(false);}}>
+              <ListItemText sx={{textShadow:'none'}}>Raffle</ListItemText>
+            </ListItemButton>
             <ListItemButton onClick={() => {scrollToAboutMe("wallynomics"); setOpen(false);}}>
-              <ListItemText>Wallynomics</ListItemText>
+              <ListItemText sx={{textShadow:'none'}}>Wallynomics</ListItemText>
+            </ListItemButton>
+            <ListItemButton onClick={() => {scrollToAboutMe("roadmap"); setOpen(false);}}>
+              <ListItemText sx={{textShadow:'none'}}>Roadmap</ListItemText>
             </ListItemButton>
             <ListItemButton onClick={() => {scrollToAboutMe("how_to_buy"); setOpen(false);}}>
-              <ListItemText>How to buy</ListItemText>
+              <ListItemText sx={{textShadow:'none'}}>How to buy</ListItemText>
             </ListItemButton>
             <ListItemButton onClick={() =>{ scrollToAboutMe("about");  setOpen(false);}}>
-              <ListItemText>About Me</ListItemText>
+              <ListItemText sx={{textShadow:'none'}}>About Me</ListItemText>
             </ListItemButton>
             <ListItemButton onClick={() =>{ scrollToAboutMe("memes");  setOpen(false);}}>
-              <ListItemText>memes</ListItemText>
+              <ListItemText sx={{textShadow:'none'}}>memes</ListItemText>
             </ListItemButton>
           </List>
         </Box>

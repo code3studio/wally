@@ -11,7 +11,7 @@ const Ready = (_props: Props) => {
 
   return (
     <section className="ready" id="how_to_buy">
-      <Grid container justifyContent={"center"} mt={2}>
+      <Grid container justifyContent={"center"} mt={4}>
         <Typography color={"azure"} variant="h2" textAlign={"center"}>
           How to buy wally
         </Typography>

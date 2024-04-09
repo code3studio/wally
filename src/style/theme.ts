@@ -5,7 +5,7 @@ export const theme = createTheme({
     values:{
         xs: 0,
         sm: 760,
-        md: 1200,
+        md: 1300,
         lg: 1536,
         xl: 1918,
     }
@@ -38,7 +38,8 @@ export const theme = createTheme({
             styleOverrides:{
                 root:{
                     fontSize:20,
-                    textTransform:'capitalize'
+                    textTransform:'capitalize',
+                    textShadow:"-1px -1px 0 #000,1px -1px 0 #000, -1px 1px 0 #000,1px 1px 0 #000;"
                 }
             }
         },
