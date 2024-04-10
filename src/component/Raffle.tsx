@@ -17,28 +17,34 @@ const Raffle = (_props: Props) => {
         alignItems={"center"}
       >
         <Grid item mb={4}>
-          <Grid container>
-
-        <Typography variant="h5" color={"azure"} mt={4}>
-          Total Burn: 0%
-        </Typography>
-        <Typography ml={6} variant="h5" color={"azure"} mt={4}>
-         Goal: burn 10% supply
-        </Typography>
+          <Grid container columnGap={4} >
+            <Grid item md={"auto"} xs={12}>
+              <Typography textAlign={"center"} variant="h5" color={"azure"} mt={4}>
+                Total Burn: 0%
+              </Typography>
+            </Grid>
+            <Grid item md="auto" xs={12}>
+              <Typography variant="h5" textAlign={"center"} color={"azure"} mt={4}>
+                Goal: burn 10% supply
+              </Typography>
+            </Grid>
           </Grid>
-
         </Grid>
-        <img src={BarImg} alt="bar"/>
+        <img src={BarImg} alt="bar" />
         <Fab
-        sx={{my:4}}
+          sx={{ my: 4 }}
           variant="extended"
-          style={{color:'azure',fontSize:"2.3rem", backgroundColor:"#FFBB01"}}
+          style={{
+            color: "azure",
+            fontSize: "2.3rem",
+            backgroundColor: "#FFBB01",
+          }}
           href="https://wof.wallythewhale.xyz/"
           target="_blank"
         >
           Enter Raffle
         </Fab>
-        
+
         {/* <img src={BarImg} alt="bar"/> */}
       </Grid>
     </section>
