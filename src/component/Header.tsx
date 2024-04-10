@@ -48,7 +48,7 @@ const Header = (_props: Props) => {
       }}
     >
       <Toolbar sx={{height:100}}> */}
-      <Hidden mdDown>
+      <Hidden lgDown>
         <Box sx={{ position: "absolute", top: 36, left: 30 }}>
           <ButtonBase
             sx={{ mr: {xl: 4,lg:2,md:1}, color: "white" }}
@@ -98,7 +98,7 @@ const Header = (_props: Props) => {
         </Typography>
         {/* <Box flexGrow={1} /> */}
       </Grid>
-      <Hidden mdDown>
+      <Hidden lgDown>
         <Box sx={{ position: "absolute", top: 32, right: 30 }}>
           <Button component="a"
             target="_blank"
@@ -117,7 +117,7 @@ const Header = (_props: Props) => {
       </Hidden>
       {/* <Box flexGrow={1}/> */}
 
-      <Hidden mdUp>
+      <Hidden lgUp>
         <Button
           onClick={() => {
             setOpen(true);
