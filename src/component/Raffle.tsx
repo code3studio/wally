@@ -20,7 +20,7 @@ const Raffle = (_props: Props) => {
           <Grid container columnGap={4} >
             <Grid item md={"auto"} xs={12}>
               <Typography textAlign={"center"} variant="h5" color={"azure"} mt={4}>
-                Total Burn: 0%
+                Total Burn: 0.19%
               </Typography>
             </Grid>
             <Grid item md="auto" xs={12}>
