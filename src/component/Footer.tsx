@@ -1,4 +1,4 @@
-
+import DiscordIcon from '../assets/svg/discord.svg'
 type Props = {}
 
 const Footer = (_props: Props) => {
@@ -55,6 +55,28 @@ const Footer = (_props: Props) => {
               target="_blank"
               >
                               <img src='assets/svg/twitter1.svg' alt='twitter'/>
+
+              {/* <svg
+                width="27"
+                height="25"
+                viewBox="0 0 27 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g>
+                  <path
+                    d="M20.6383 0.561523H24.6249L15.8716 10.746L26.0983 24.5615H18.0729L11.7896 16.166L4.59627 24.5615H0.6096L9.88293 13.6685L0.0895996 0.561523H8.31427L13.9909 8.2309L20.6383 0.561523ZM19.2429 22.1704H21.4529L7.15293 2.86411H4.77827L19.2429 22.1704Z"
+                    fill="currentColor"
+                  />
+                </g>
+              </svg> */}
+            </a>
+            <a
+              className="footer__btn footer__btn_sm"
+              href="https://discord.com/invite/adAgU2k3ry"
+              target="_blank"
+              >
+                              <img src={DiscordIcon} alt='discord' width={30}/>
 
               {/* <svg
                 width="27"

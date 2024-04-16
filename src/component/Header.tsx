@@ -12,6 +12,7 @@ import {
   Typography,
 } from "@mui/material";
 import { useState } from "react";
+import DiscordIcon from "../assets/svg/discord.svg"
 
 interface Props {
   /**
@@ -113,6 +114,14 @@ const Header = (_props: Props) => {
           >
             <img src="assets/svg/te.svg" width={20} />
           </Button>
+          <Button
+            sx={{ ml: 2 }}
+            component="a"
+            target="_blank"
+            href="https://discord.com/invite/adAgU2k3ry"
+          >
+            <img src={DiscordIcon} width={25} />
+          </Button>
         </Box>
       </Hidden>
       {/* <Box flexGrow={1}/> */}
@@ -178,6 +187,14 @@ const Header = (_props: Props) => {
             href="https://t.me/wallyonsolana"
           >
             <img src="assets/svg/te.svg" width={20} />
+          </Button>
+          <Button
+            sx={{ ml: 1 }}
+            component="a"
+            target="_blank"
+            href="https://discord.com/invite/adAgU2k3ry"
+          >
+            <img src={DiscordIcon} width={25} />          
           </Button>
         </Box>
       </Drawer>
