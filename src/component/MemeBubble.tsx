@@ -9,7 +9,7 @@ const MemeBubble = (_props: Props) => {
     <motion.div
       onClick={() =>
         window.open(
-          "https://drive.google.com/drive/folders/1Tge7xGx7j7kko_5p-TOd5e3gTmBI3_sC"
+          "https://drive.google.com/drive/folders/1_D_ZeTQZmUH8ZsjFAqym3SoahbxccEp8"
         )
       }
       initial={{ scale: 1 }}
